@@ -1,0 +1,13 @@
+CDI extension module that provides a DSL with guice-like syntax for composing applications on top of CDI as documented at:
+
+http://www.seamframework.org/Weld/PortableExtensionsPackage#H-GuicestyleConfigurationAPI
+ 
+To use in a CDI application:
+
+- Create a class that extends Module and override the configure() method.
+- Register your module as a service provider by creating a file named META-INF/services/di.sample.cdi.dsl.Module which contains the name of your module (e.g. di.sample.cdi.dsl.test.palindrome.AppModule).
+
+See tests for an example.
+
+
+NOTE: this works in the few use cases I've currently tested it with but it's still rather "rough", so you should handle it with care! 
